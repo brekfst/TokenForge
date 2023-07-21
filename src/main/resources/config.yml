@@ -1,0 +1,6 @@
+############################################ TOKENFORGE ############################################
+
+# set payment item
+payment-item: emerald_block   # default: emerald_block cannot be null, item must have lore line
+payment-enchant: lure         # must be API enchant name, check enchantment_points.yml for the names
+payment-enchant-level: 1      # must be integer, can be any level

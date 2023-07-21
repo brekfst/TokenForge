@@ -1,0 +1,11 @@
+name: TokenForge
+version: '1.0'
+main: me.brekfst.tokenforge.TokenForge
+author: brekfst
+description: A plugin that allows you to enchant tools through a GUI.
+api-version: '1.20'
+commands:
+  forge:
+    description: opens a gui to enchant tools
+  forgereload:
+    description: reloads the plugin configs

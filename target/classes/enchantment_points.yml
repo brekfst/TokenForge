@@ -1,0 +1,154 @@
+enchantments:
+  MENDING:
+    1: 0
+  DURABILITY:
+    3: 0
+    4: 1000
+    5: 1200
+    6: 1500
+  DIG_SPEED:
+    5: 0
+    6: 1000
+    7: 1250
+  LOOT_BONUS_BLOCKS:
+    3: 0
+    4: 750
+    5: 1250
+  SILK_TOUCH:
+    1: 0
+  LURE:
+    3: 0
+    4: 750
+    5: 1000
+    6: 1300
+  LUCK:
+    3: 0
+    4: 500
+    5: 750
+    6: 1000
+  WATER_WORKER:
+    1: 0
+  PROTECTION_EXPLOSIONS:
+    4: 0
+    5: 750
+    6: 1000
+  PROTECTION_FIRE:
+    4: 0
+    5: 750
+    6: 1000
+  PROTECTION_PROJECTILE:
+    4: 0
+    5: 750
+    6: 1000
+  PROTECTION_ENVIRONMENTAL:
+    4: 0
+    5: 1500
+    6: 2500
+  PROTECTION_FALL:
+    4: 0
+    5: 1000
+  FROST_WALKER:
+    2: 0
+    3: 500
+    4: 750
+    5: 1000
+    6: 1250
+  OXYGEN:
+    3: 0
+    4: 500
+    5: 750
+    6: 1250
+  SOUL_SPEED:
+    3: 0
+    4: 500
+    5: 750
+  THORNS:
+    3: 0
+    4: 500
+    5: 750
+    6: 1250
+  DEPTH_STRIDER:
+    3: 0
+    4: 750
+    5: 1000
+    6: 1500
+  CHANNELING:
+    1: 0
+  ARROW_FIRE:
+    1: 0
+    2: 500
+    3: 750
+    4: 1000
+    5: 1250
+  IMPALING:
+    5: 0
+    6: 500
+  ARROW_INFINITE:
+    1: 0
+  LOYALTY:
+    3: 0
+    4: 500
+    5: 750
+    6: 1000
+  RIPTIDE:
+    3: 0
+    4: 500
+    5: 750
+    6: 1000
+  MULTISHOT:
+    1: 0
+  PIERCING:
+    4: 0
+    5: 750
+    6: 1000
+    7: 1250
+  ARROW_DAMAGE:
+    5: 0
+    6: 1000
+  ARROW_KNOCKBACK:
+    2: 0
+    3: 750
+    4: 1000
+    5: 1250
+    6: 1750
+  QUICK_CHARGE:
+    3: 0
+    4: 500
+    5: 750
+  DAMAGE_ARTHROPODS:
+    5: 0
+    6: 500
+  FIRE_ASPECT:
+    2: 0
+    3: 500
+    4: 750
+    5: 1000
+    6: 1300
+  LOOT_BONUS_MOBS:
+    3: 0
+    4: 1000
+    5: 1250
+    6: 2000
+  KNOCKBACK:
+    2: 0
+    3: 750
+    4: 1000
+    5: 1250
+    6: 1500
+  DAMAGE_ALL:
+    5: 0
+    6: 1250
+    7: 2000
+  DAMAGE_UNDEAD:
+    5: 0
+    6: 500
+  SWEEPING_EDGE:
+    3: 0
+    4: 500
+    5: 750
+    6: 1000
+  SWIFT_SNEAK:
+    3: 0
+    4: 500
+    5: 750
+    6: 1250
