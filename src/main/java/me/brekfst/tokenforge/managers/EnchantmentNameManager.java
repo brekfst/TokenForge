@@ -52,7 +52,7 @@ public class EnchantmentNameManager {
         enchantmentNameMappings.put("knockback", KNOCKBACK);
         enchantmentNameMappings.put("sharpness", DAMAGE_ALL);
         enchantmentNameMappings.put("smite", DAMAGE_UNDEAD);
-        enchantmentNameMappings.put("sweeping Edge", SWEEPING_EDGE);
+        enchantmentNameMappings.put("sweeping edge", SWEEPING_EDGE);
         enchantmentNameMappings.put("swift sneak", SWIFT_SNEAK);
     }
 

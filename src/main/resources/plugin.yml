@@ -1,5 +1,5 @@
 name: TokenForge
-version: '1.0'
+version: '1.1'
 main: me.brekfst.tokenforge.TokenForge
 author: brekfst
 description: A plugin that allows you to enchant tools through a GUI.

@@ -5,6 +5,7 @@ import me.brekfst.tokenforge.commands.TokenForgeCommand;
 import me.brekfst.tokenforge.files.EnchantmentFile;
 import me.brekfst.tokenforge.listeners.MenuListener;
 import me.brekfst.tokenforge.managers.PointsManager;
+import me.brekfst.tokenforge.menusystem.menus.renamemenu.RenameMenu;
 import me.brekfst.tokenforge.utilitys.PlayerMenuUtility;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;

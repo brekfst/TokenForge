@@ -59,6 +59,7 @@ me\brekfst\tokenforge\menusystem\menus\enchantmentmenus\armourenchants\Projectil
 me\brekfst\tokenforge\managers\ToolMenuManager.class
 me\brekfst\tokenforge\menusystem\menus\enchantmentmenus\armourenchants\ThornsMenu.class
 me\brekfst\tokenforge\menusystem\menus\enchantmentmenus\meleeenchants\KnockbackMenu.class
+me\brekfst\tokenforge\menusystem\menus\renamemenu\RenameMenu.class
 me\brekfst\tokenforge\menusystem\menus\enchantmentmenus\generalenchants\MendingMenu.class
 me\brekfst\tokenforge\menusystem\menus\enchantmentmenus\rangedenchants\ChannelingMenu.class
 me\brekfst\tokenforge\menusystem\menus\enchantmentmenus\meleeenchants\LootingMenu.class

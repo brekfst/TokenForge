@@ -4,7 +4,7 @@ import me.brekfst.tokenforge.TokenForge;
 import me.brekfst.tokenforge.managers.EnchantmentManager;
 import me.brekfst.tokenforge.managers.PointsManager;
 import me.brekfst.tokenforge.menusystem.Menu;
-import me.brekfst.tokenforge.menusystem.menus.toolmenu.ToolMenu;
+import me.brekfst.tokenforge.menusystem.menus.renamemenu.RenameMenu;
 import me.brekfst.tokenforge.utilitys.PlayerMenuUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -18,10 +18,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import java.util.Arrays;
-import java.util.Map;
+import java.util.*;
 
 public class ConfirmationMenu extends Menu {
+
     private PlayerMenuUtility playerMenuUtility;
     private ItemStack selectedTool;
 
@@ -107,7 +107,19 @@ public class ConfirmationMenu extends Menu {
                             for (Map.Entry<Enchantment, Integer> entry : enchantments.entrySet()) {
                                 toolCopyMeta.addEnchant(entry.getKey(), entry.getValue(), true);
                             }
+
+                            String customName = playerMenuUtility.getCustomName();
+                            if (customName != null) {
+                                toolCopyMeta.setDisplayName(customName);
+                            }
+
+                            String customLore = playerMenuUtility.getCustomLore();
+                            if (customLore != null) {
+                                toolCopyMeta.setLore(Collections.singletonList(customLore));
+                            }
+
                             toolCopy.setItemMeta(toolCopyMeta);
+
                         } else {
                             // Create a new ItemMeta if it is null
                             ItemMeta newToolMeta = Bukkit.getItemFactory().getItemMeta(toolCopy.getType());
@@ -115,6 +127,17 @@ public class ConfirmationMenu extends Menu {
                                 for (Map.Entry<Enchantment, Integer> entry : enchantments.entrySet()) {
                                     newToolMeta.addEnchant(entry.getKey(), entry.getValue(), true);
                                 }
+
+                                String customName = playerMenuUtility.getCustomName();
+                                if (customName != null) {
+                                    toolCopyMeta.setDisplayName(customName);
+                                }
+
+                                String customLore = playerMenuUtility.getCustomLore();
+                                if (customLore != null) {
+                                    toolCopyMeta.setLore(Collections.singletonList(customLore));
+                                }
+
                                 toolCopy.setItemMeta(newToolMeta);
                             }
                         }
@@ -145,6 +168,12 @@ public class ConfirmationMenu extends Menu {
             case 36:
                 player.playSound(player.getLocation(), "block.anvil.break", 1, 1);
                 playerMenuUtility.getPreviousMenu().open();
+                break;
+
+            case 40:
+                player.playSound(player.getLocation(), "block.anvil.break", 1, 1);
+                playerMenuUtility.setPreviousMenu(this);
+                new RenameMenu(playerMenuUtility).open();
                 break;
         }
     }
@@ -194,6 +223,13 @@ public class ConfirmationMenu extends Menu {
             pointsRemainingMeta.setOwningPlayer(player);
             pointsRemaining.setItemMeta(pointsRemainingMeta);
 
+            // rename
+            ItemStack rename = new ItemStack(Material.NAME_TAG);
+            ItemMeta renameMeta = rename.getItemMeta();
+            renameMeta.setDisplayName(ChatColor.GOLD + "Rename");
+            renameMeta.setLore(Arrays.asList(ChatColor.GRAY + "Rename your tool"));
+            rename.setItemMeta(renameMeta);
+
             // close
             ItemStack close = new ItemStack(Material.BARRIER);
             ItemMeta closeMeta = close.getItemMeta();
@@ -212,6 +248,7 @@ public class ConfirmationMenu extends Menu {
             inventory.setItem(21, confirm);
             inventory.setItem(23, cancel);
             inventory.setItem(36, close);
+            inventory.setItem(40, rename);
         }
     }
 }

@@ -68,7 +68,7 @@ public class ImpalingMenu extends Menu {
         ItemStack impalingVI = new ItemStack(Material.ENCHANTED_BOOK);
         ItemMeta impalingVIMeta = impalingVI.getItemMeta();
         impalingVIMeta.setDisplayName(ChatColor.GOLD + "Impaling VI");
-        impalingVIMeta.setLore(Arrays.asList(ChatColor.GRAY + "500 Points"));
+        impalingVIMeta.setLore(Arrays.asList(ChatColor.GRAY + "1250 Points"));
         impalingVI.setItemMeta(impalingVIMeta);
 
         // close button

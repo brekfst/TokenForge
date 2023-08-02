@@ -70,14 +70,14 @@ public class ProtectionMenu extends Menu {
         ItemStack protectionV = new ItemStack(Material.ENCHANTED_BOOK);
         ItemMeta protectionVMeta = protectionV.getItemMeta();
         protectionVMeta.setDisplayName(ChatColor.GOLD + "Protection V");
-        protectionVMeta.setLore(Arrays.asList(ChatColor.GRAY + "750 Points"));
+        protectionVMeta.setLore(Arrays.asList(ChatColor.GRAY + "1500 Points"));
         protectionV.setItemMeta(protectionVMeta);
 
         // protection VI
         ItemStack protectionVI = new ItemStack(Material.ENCHANTED_BOOK);
         ItemMeta protectionVIMeta = protectionVI.getItemMeta();
         protectionVIMeta.setDisplayName(ChatColor.GOLD + "Protection VI");
-        protectionVIMeta.setLore(Arrays.asList(ChatColor.GRAY + "1000 Points"));
+        protectionVIMeta.setLore(Arrays.asList(ChatColor.GRAY + "2500 Points"));
         protectionVI.setItemMeta(protectionVIMeta);
 
         // close button
