@@ -5,6 +5,7 @@ import me.brekfst.tokenforge.managers.EnchantmentManager;
 import me.brekfst.tokenforge.managers.PointsManager;
 import me.brekfst.tokenforge.menusystem.Menu;
 import me.brekfst.tokenforge.menusystem.menus.renamemenu.RenameMenu;
+import me.brekfst.tokenforge.menusystem.menus.toolmenu.ToolMenu;
 import me.brekfst.tokenforge.utilitys.PlayerMenuUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -113,9 +114,11 @@ public class ConfirmationMenu extends Menu {
                                 toolCopyMeta.setDisplayName(customName);
                             }
 
-                            String customLore = playerMenuUtility.getCustomLore();
+                            List<String> customLore = new ArrayList<>();
+                            customLore.add(playerMenuUtility.getCustomLore());
+                            customLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "ꜰʀᴜɪᴛ ᴛᴏᴋᴇɴ ᴇxᴄʟᴜsɪᴠᴇ");
                             if (customLore != null) {
-                                toolCopyMeta.setLore(Collections.singletonList(customLore));
+                                toolCopyMeta.setLore(customLore);
                             }
 
                             toolCopy.setItemMeta(toolCopyMeta);
@@ -133,9 +136,11 @@ public class ConfirmationMenu extends Menu {
                                     toolCopyMeta.setDisplayName(customName);
                                 }
 
-                                String customLore = playerMenuUtility.getCustomLore();
+                                List<String> customLore = new ArrayList<>();
+                                customLore.add(playerMenuUtility.getCustomLore());
+                                customLore.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "ꜰʀᴜɪᴛ ᴛᴏᴋᴇɴ ᴇxᴄʟᴜsɪᴠᴇ");
                                 if (customLore != null) {
-                                    toolCopyMeta.setLore(Collections.singletonList(customLore));
+                                    toolCopyMeta.setLore(customLore);
                                 }
 
                                 toolCopy.setItemMeta(newToolMeta);
@@ -159,15 +164,9 @@ public class ConfirmationMenu extends Menu {
                     player.sendMessage(ChatColor.RED + "You do not have the required materials to craft this tool!");
                 }
                 break;
-
             case 23:
                 player.playSound(player.getLocation(), "block.anvil.break", 1, 1);
-                playerMenuUtility.getPreviousMenu().open();
-                break;
-
-            case 36:
-                player.playSound(player.getLocation(), "block.anvil.break", 1, 1);
-                playerMenuUtility.getPreviousMenu().open();
+                new ToolMenu(playerMenuUtility).open();
                 break;
 
             case 40:
@@ -230,13 +229,6 @@ public class ConfirmationMenu extends Menu {
             renameMeta.setLore(Arrays.asList(ChatColor.GRAY + "Rename your tool"));
             rename.setItemMeta(renameMeta);
 
-            // close
-            ItemStack close = new ItemStack(Material.BARRIER);
-            ItemMeta closeMeta = close.getItemMeta();
-            closeMeta.setDisplayName(ChatColor.RED + "Close");
-            closeMeta.setLore(Arrays.asList(ChatColor.GRAY + "Close"));
-            close.setItemMeta(closeMeta);
-
             // frame
             ItemStack frame = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
             for (int i : new int[]{1, 2, 3, 4, 5, 6, 7, 8, 17, 26, 35, 44, 43, 42, 41, 40, 39, 38, 37, 36, 27, 18, 9, 0}) {
@@ -247,7 +239,6 @@ public class ConfirmationMenu extends Menu {
             inventory.setItem(22, toolCopy);
             inventory.setItem(21, confirm);
             inventory.setItem(23, cancel);
-            inventory.setItem(36, close);
             inventory.setItem(40, rename);
         }
     }

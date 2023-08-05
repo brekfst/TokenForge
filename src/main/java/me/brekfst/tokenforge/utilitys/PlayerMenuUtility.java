@@ -28,6 +28,7 @@ public class PlayerMenuUtility {
     }
 
     private boolean settingCustomLore = false;
+    private boolean settingCustomName = false;
 
     public Player getOwner() {
         return owner;
@@ -95,6 +96,14 @@ public class PlayerMenuUtility {
 
     public boolean isSettingCustomLore() {
         return settingCustomLore;
+    }
+
+    public boolean isSettingCustomName() {
+        return settingCustomName;
+    }
+
+    public void setSettingCustomName(boolean settingCustomName) {
+        this.settingCustomName = settingCustomName;
     }
 
     public void setSettingCustomLore(boolean settingCustomLore) {

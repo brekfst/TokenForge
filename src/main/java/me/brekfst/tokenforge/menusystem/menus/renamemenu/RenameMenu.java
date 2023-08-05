@@ -33,12 +33,13 @@ public class RenameMenu extends Menu {
         int rawSlot = e.getRawSlot();
 
         switch (rawSlot) {
-            case 22:
+            case 21:
                 player.sendMessage(ChatColor.GOLD + "Please enter the new name for your tool in chat!");
+                playerMenuUtility.setSettingCustomName(true);
                 playerMenuUtility.setCurrentMenu(this);
                 player.closeInventory();
                 break;
-            case 31:
+            case 23:
                 player.sendMessage(ChatColor.GOLD + "Please enter the new lore for your tool in chat!");
                 playerMenuUtility.setSettingCustomLore(true);
                 playerMenuUtility.setCurrentMenu(this);
@@ -47,6 +48,15 @@ public class RenameMenu extends Menu {
             case 36:
                 // close
                 playerMenuUtility.getPreviousMenu().open();
+                break;
+            case 40:
+                // how to
+                break;
+            case 44:
+                // reset
+                playerMenuUtility.clearCustomName();
+                playerMenuUtility.clearCustomLore();
+                player.sendMessage(ChatColor.GOLD + "Your tool name and lore has been reset!");
                 break;
         }
     }
@@ -68,6 +78,24 @@ public class RenameMenu extends Menu {
         loreMeta.setLore(Arrays.asList(ChatColor.GRAY + "Set the lore of your tool!"));
         lore.setItemMeta(loreMeta);
 
+        // how to
+        ItemStack howTo = new ItemStack(Material.EMERALD_BLOCK);
+        ItemMeta howToMeta = howTo.getItemMeta();
+        howToMeta.setDisplayName(ChatColor.GOLD + "Rename Menu Help");
+        howToMeta.setLore(Arrays.asList(ChatColor.GRAY + "How to Rename: ",
+                ChatColor.GRAY + "you can use hex codes! begin each code with &# ",
+                ChatColor.GRAY + "you may also use custom fonts from the internet!",
+                ChatColor.GRAY + "for example you could do &#09c4e0&lᴛ for a blue",
+                ChatColor.GRAY + "bolded letter T. for more help see a staff member!"));
+        howTo.setItemMeta(howToMeta);
+
+        // reset
+        ItemStack reset = new ItemStack(Material.MAP);
+        ItemMeta resetMeta = reset.getItemMeta();
+        resetMeta.setDisplayName(ChatColor.GOLD + "Reset");
+        resetMeta.setLore(Arrays.asList(ChatColor.GRAY + "Reset the name and lore of your tool!"));
+        reset.setItemMeta(resetMeta);
+
         // close
         ItemStack close = new ItemStack(Material.BARRIER);
         ItemMeta closeMeta = close.getItemMeta();
@@ -77,13 +105,15 @@ public class RenameMenu extends Menu {
 
         // frame
         ItemStack frame = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
-        for (int i : new int[]{1, 2, 3, 4, 5, 6, 7, 8, 17, 26, 35, 44, 43, 42, 41, 40, 39, 38, 37, 27, 18, 9, 0}) {
+        for (int i : new int[]{1, 2, 3, 4, 5, 6, 7, 8, 17, 26, 35, 43, 42, 41, 39, 38, 37, 27, 18, 9, 0}) {
             inventory.setItem(i, frame);
         }
 
-        inventory.setItem(22, rename);
-        inventory.setItem(31, lore);
+        inventory.setItem(21, rename);
+        inventory.setItem(23, lore);
         inventory.setItem(36, close);
+        inventory.setItem(40, howTo);
+        inventory.setItem(44, reset);
 
     }
 

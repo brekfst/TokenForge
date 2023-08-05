@@ -45,162 +45,162 @@ public class ToolMenu extends Menu {
                 // points remaining
                 break;
             case 13:
+                playerMenuUtility.clearPlayerData();
                 ItemStack elytra = event.getCurrentItem();
                 if (elytra != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(elytra);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new ElytraMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 20:
+                playerMenuUtility.clearPlayerData();
                 ItemStack sword = event.getCurrentItem();
                 if (sword != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(sword);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new SwordMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 21:
+                playerMenuUtility.clearPlayerData();
                 ItemStack pickaxe = event.getCurrentItem();
                 if (pickaxe != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(pickaxe);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new PickaxeMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 22:
+                playerMenuUtility.clearPlayerData();
                 ItemStack axe = event.getCurrentItem();
                 if (axe != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(axe);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new AxeMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 23:
+                playerMenuUtility.clearPlayerData();
                 ItemStack shovel = event.getCurrentItem();
                 if (shovel != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(shovel);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new ShovelMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 24:
+                playerMenuUtility.clearPlayerData();
                 ItemStack hoe = event.getCurrentItem();
                 if (hoe != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(hoe);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new HoeMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 29:
+                playerMenuUtility.clearPlayerData();
                 ItemStack turtleHelmet = event.getCurrentItem();
                 if (turtleHelmet != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(turtleHelmet);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new TurtleMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 30:
+                playerMenuUtility.clearPlayerData();
                 ItemStack helmet = event.getCurrentItem();
                 if (helmet != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(helmet);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new HelmetMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 31:
+                playerMenuUtility.clearPlayerData();
                 ItemStack chestplate = event.getCurrentItem();
                 if (chestplate != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(chestplate);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new ChestplateMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 32:
+                playerMenuUtility.clearPlayerData();
                 ItemStack leggings = event.getCurrentItem();
                 if (leggings != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(leggings);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new LeggingsMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 33:
+                playerMenuUtility.clearPlayerData();
                 ItemStack boots = event.getCurrentItem();
                 if (boots != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(boots);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new BootsMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 38:
+                playerMenuUtility.clearPlayerData();
                 ItemStack trident = event.getCurrentItem();
                 if (trident != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(trident);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new TridentMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 39:
+                playerMenuUtility.clearPlayerData();
                 ItemStack bow = event.getCurrentItem();
                 if (bow != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(bow);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new BowMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 40:
+                playerMenuUtility.clearPlayerData();
                 ItemStack crossbow = event.getCurrentItem();
                 if (crossbow != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(crossbow);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new CrossbowMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 41:
+                playerMenuUtility.clearPlayerData();
                 ItemStack shears = event.getCurrentItem();
                 if (shears != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(shears);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new ShearsMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;
             case 42:
+                playerMenuUtility.clearPlayerData();
                 ItemStack fishingRod = event.getCurrentItem();
                 if (fishingRod != null) {
                     PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
                     playerMenuUtility.setSelectedTool(fishingRod);
                 }
-
                 player.playSound(player.getLocation(), "entity.player.levelup", 1.0F, 1.0F);
                 new FishingRodMenu(TokenForge.getPlayerMenuUtility(player)).open();
                 break;

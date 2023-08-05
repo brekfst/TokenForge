@@ -48,6 +48,10 @@ public class MenuListener implements Listener {
         Player player = e.getPlayer();
         PlayerMenuUtility playerMenuUtility = TokenForge.getPlayerMenuUtility(player);
         if (playerMenuUtility != null && playerMenuUtility.getOwner().equals(player)) {
+            if (!playerMenuUtility.isSettingCustomLore() && !playerMenuUtility.isSettingCustomName()) {
+                return;
+            }
+
             e.setCancelled(true);
 
             String input = e.getMessage();
@@ -56,10 +60,12 @@ public class MenuListener implements Listener {
                 // Player is setting the lore
                 playerMenuUtility.setCustomLore(input);
                 player.sendMessage("Item lore updated to " + input);
-            } else {
+                playerMenuUtility.setSettingCustomLore(false);
+            } else if (playerMenuUtility.isSettingCustomName()) {
                 // Player is setting the name
                 playerMenuUtility.setCustomName(input);
                 player.sendMessage("Item renamed to " + input);
+                playerMenuUtility.setSettingCustomName(false);
             }
 
             TokenForge plugin = TokenForge.getPlugin(TokenForge.class);
